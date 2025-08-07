@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block contents%}
+
+<section class="hero-area">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-6 block">
+			<h2>User Login page</h2>
+                <form method="post" class="text-left clearfix mt-50" action="{% url 'userlogincheck'%}" >
+                    {%csrf_token%}
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control"  placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pswd" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-main" >Sign In</button>
+
+                    </form>
+                <p class="mt-20">New to this site ?<a href="{%url 'usersignup'%}" class="hover-icon"> Create New Account</a></p>
+                <style>
+                    a.hover-icon{
+							color: white;
+							font-size: x-large;
+							border: none;
+							color: white;
+							padding: 15px 32px;
+							text-align: center;
+							text-decoration: none;
+							display: inline-block;
+							font-size: 16px;
+							margin: 4px 2px;
+							cursor: pointer;
+							border-radius: 12px;
+						}
+						a.hover-icon:hover{
+							color:black;
+                        }
+                        button.btn-main{
+                            color: white;
+                            font-size: x-large;
+                            background-color: #0de414;
+                            border: none;
+                            color: white;
+                            padding: 10px 20px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            transition: 0.3s;
+                        }
+                        button.btn-main:hover{
+                            color:black;
+                            background-color: aqua;
+                        }
+                </style>
+                <center>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <font color='YELLOW'> {{ message }}</font>
+                    {% endfor %}
+                    {% endif %}
+                </center>
+            </div>
+		</div>
+	</div>
+</section>
+{%endblock%}

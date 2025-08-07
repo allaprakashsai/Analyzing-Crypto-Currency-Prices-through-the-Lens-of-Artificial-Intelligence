@@ -1,0 +1,50 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+<section class="hero-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="video-player">
+					<img class="img-fluid rounded" src="{%static 'images/slider/slider-bg-2.jpg'%}" alt="">
+
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="block"> 
+					<style>
+						a.play-icon{
+							color: white;
+							font-size: x-large;
+							background-color: #4CAF50;
+							border: none;
+							color: white;
+							padding: 15px 32px;
+							text-align: center;
+							text-decoration: none;
+							display: inline-block;
+							font-size: 16px;
+							margin: 4px 2px;
+							cursor: pointer;
+							border-radius: 12px;
+						}
+						a.play-icon:hover{
+							color:black;
+						}
+					</style>
+					<h2>Cryptocurrency Price Analysis With Artificial Intelligence</h2>
+					<p>Cryptocurrency is playing an increasingly important role in reshaping the financial system due to
+						its growing popular appeal and mechant acceptance. While many people are making investments in
+						Cryptocurrency, the dynamical features, uncertainty, the predictability of Cryptocurrency are
+						still mostly unknown, which dramatically risk the investments</p>
+					<a class="play-icon" href="javascript:void(0)">
+						<!--<i class="tf-ion-ios-play"  data-video="https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"></i>-->
+						Start Trading
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{%endblock%}
